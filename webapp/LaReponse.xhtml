@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	<h:head>
+
+<title>Validation de formulaire</title>
+
+</h:head>
+
+<h:body>
+Bonjour penda cisse vous habitez à Fatick
+<br></br>
+votre poids:120
+<h:outputText value="#{perssonne.poids}"></h:outputText>
+<f:convertNumber type="number"></f:convertNumber>
+<br></br>
+le prix saisie est:120000Fcfa
+<h:outputText value="#{perssonne.prix}">
+<f:convertNumber type="currency" currencyCode="XOF"></f:convertNumber>
+</h:outputText>
+
+</h:body>
+</html>

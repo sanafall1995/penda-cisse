@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+      <title>Projet JSF</title>
+</h:head>
+<h:body> 
+
+    <h1>Accordion Panel</h1>
+
+    <p:accordionPanel>
+        <p:tab title="Introduction JSF">
+            Une petite description...
+        </p:tab>
+        <p:tab title="Les composants HTML de JSF">
+            Une petite description...
+        </p:tab>
+        <p:tab title="Les composants PrimeFaces">
+            Une petite description...
+        </p:tab>
+    </p:accordionPanel>
+       <h1>Les composants carousel de Primefaces</h1>
+       <p:carousel autoPlayInterval="2000" effect="easeInStrong" 
+       circular="true" itemStyle="width:350px">
+           <p:graphicImage width="200" value="/images/fa.jpg" />
+        <p:graphicImage width="200" value="/images/istock.jpg" />
+        <p:graphicImage width="200" value="/images/great.webp" />
+        <p:graphicImage width="200" value="/images/fa.jpg" />
+        <p:graphicImage width="200" value="/images/ist.jpg" />
+        <p:graphicImage width="200" value="/images/istock.jpg" />
+        <p:graphicImage width="200" value="/images/great.webp" />
+       </p:carousel><br /><br />
+       
+       <h1>Les composants contentFlow</h1>
+     <p:carousel autoPlayInterval="2000" effect="easeInStrong" circular="true" itemStyle="width:200px">
+        <p:graphicImage width="200" value="/images/fa.jpg" />
+        <p:graphicImage width="200" value="/images/ist.jpg" />
+        <p:graphicImage width="200" value="/images/istock.jpg" />
+        <p:graphicImage width="200" value="/images/great.webp" />
+        <p:graphicImage width="200" value="/images/fa.jpg" />    
+            </p:carousel>
+
+       
+       <h1>Les composants Galleria</h1>
+       <p:carousel autoPlayInterval="2000" effect="easeInStrong" circular="true" itemStyle="width:200px">
+        <p:graphicImage width="200" value="/images/fa.jpg" />
+        <p:graphicImage width="200" value="/images/ist.jpg" />
+        <p:graphicImage width="200" value="/images/istock.jpg" />
+            </p:carousel>
+        
+       
+       <h1>Color Picker</h1>
+       <h:form>
+          <p:outputLabel value="Votre Couleur" />
+          <p:colorPicker value="#{etudiantBean.etudiant.couleur}" mode="inline" />
+          <h:commandButton  value="Valider" />
+          Votre couleur preferee est: <h:outputText value="##{etudiantBean.etudiant.couleur}" />
+       </h:form><br /><br />
+       
+       <h1>Composants Dock de Primefaces</h1>
+       <p:dock>          
+          <p:menuitem value="Music" icon="/images/music.png" url="#" />
+          <p:menuitem value="Video" icon="/images/video.png" url="#" />
+          <p:menuitem value="Mail" icon="/images/mail.png" url="#" />
+          <p:menuitem value="Home" icon="/images/home.png" url="#" />
+          <p:menuitem value="Link" icon="/images/link.png" url="#" />      
+          <p:menuitem value="RSS" icon="/images/wifi.jpg" url="#" />
+          <p:menuitem value="History" icon="/images/history.png" url="#" />         
+       </p:dock><br /><br />
+       
+       <h1>Composant keybord de primefaces</h1>
+       <p:keyboard a:placeholder="Saisir du texte" value=""></p:keyboard>
+       
+       <h1>Google maps</h1>
+       <p:gmap center="14.724956329394747, -17.495013610804065" zoom="15" type="hybrid"
+       style="width:600px;height:400px"></p:gmap>
+       
+       <script>
+          let map;
+          async function initMap() {
+        	  //@ts-ignore
+        	  const { Map } = await google.maps.importLibrary("maps");
+        	  
+        	  map = new Map(document.getElementById("map"), {
+        		  center: { lat: 14.724956329394747 , lng: -17.495013610804065 },
+        		  zoom: 15,
+        	  });
+          }          
+          
+          initMap();
+       
+       </script>
+       
+       <script src="https://maps.google.com/maps/api/js?sensor=true"
+       type="text/javascript"></script>
+       
+</h:body>
+</html>

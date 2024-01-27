@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+
+<h:head>
+
+<title>les composants html de jsf</title>
+<link rel="stylesheet" href="./res/css/style.css"></link>
+
+</h:head>
+
+<h:body>
+
+<h:outputText value="#{test.testString}"></h:outputText> <br></br>
+<h:outputText value="Number: #{test.number}"></h:outputText> <br></br><br></br>
+<h:graphicImage id="img" value="/images.jpg"></h:graphicImage>
+<h:graphicImage id="cosmetic"  value="/res/img/cosmetic.jfif"></h:graphicImage>
+<h:outputFormat value="Bonjour Moussa vous avez 25 ans Moussa ">
+<f:param value="Moussa"></f:param>
+<f:param value="25"></f:param>
+</h:outputFormat>
+<br></br>
+<h:panelGroup>
+<h:outputText value="Une ligne"></h:outputText>
+<h:outputText value="regroupée avec panelgroup"></h:outputText>
+</h:panelGroup><br></br><br></br>
+<!-- a mettre dans un formulaire pour que ça fonctionne -->
+<h:commandLink immediate="true" action="/test.xhtml" value="lien vers test">
+</h:commandLink> <br></br> <br></br>
+<h:outputLink value="./form.xhtml">
+<h:outputText value="Lien vers le formulaire"></h:outputText>
+</h:outputLink><br></br> <br></br>
+<h:link value="lien vers form" outcome="form"></h:link>
+
+</h:body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+<!-- <h:outputStylesheet library= "CSS" name="bootstrap.min.css"></h:outputStylesheet> -->
+ <link rel="stylesheet" href="./ressources/css/bootstrap.css"></link>
+</h:head>
+
+<h:body>
+
+<ul>   
+
+<ui:repeat var="ville" value="#{['Dakar', 'Thies', 'Ziguinchor', 'Fatick', 'Kaolack', 'Mbour', 'Diourbel', 'Kolda', 'Saint-Louis']}">
+
+<li>#{ville}</li>
+</ui:repeat>
+
+</ul>
+
+<h:panelGrid Columns="3">
+
+<f:facet name="header">
+
+<h:outputLabel value="Liste ville"></h:outputLabel>
+</f:facet>
+<h:outputText value="Dakar"></h:outputText>
+<h:outputText value="Thies"></h:outputText>
+<h:outputText value="Ziguinchor"></h:outputText>
+<h:outputText value="Fatick"></h:outputText>
+<h:outputText value="Kaolack"></h:outputText>
+<h:outputText value="Mbour"></h:outputText>
+<h:outputText value="Diourbel"></h:outputText>
+<h:outputText value="Kolda"></h:outputText>
+<h:outputText value="Saint-Louis"></h:outputText>
+<f:facet name="footer">
+<h:outputLabel value="Liste ville"></h:outputLabel>
+</f:facet>
+
+</h:panelGrid>
+
+<h:dataTable var ="etu" width="40%" value="tableau.listeEtudiant" border="1">
+<h:column>
+
+
+<f:facet name="header">Prenom: </f:facet>
+ Penda
+
+</h:column>
+
+<h:column>
+
+<f:facet name="header">Nom: </f:facet>
+ CISSE
+
+</h:column>
+
+<h:column>
+
+<f:facet name="header">Ville: </f:facet>
+ Fatick
+
+</h:column>
+
+</h:dataTable>
+
+</h:body>
+</html>
